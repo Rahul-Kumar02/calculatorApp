@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-size: 20px; */
+    font-family: Arial, Helvetica, sans-serif;
+    /* color: white; */
+    color: white;
+    /* flex-direction: column; */
+}
+
+body{
+
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    flex-direction: column;
+    gap: 100px;
+
+
+}
+h1{
+    font-size: 40px;
+}
+
+
+.Calculator_caontainer{
+   /* border: 2px solid white; */
+   padding: 30px;
+   border-radius: 20px;
+   border: 2px solid white;
+   /* box-shadow: inset 0px 0px 40px rgb(119, 119, 119);*/
+   /* box-shadow: 2px 2px 7px rgb(246, 246, 247); */
+}
+.inputBox{
+    /* background-color: red; */
+    width: 280px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+}
+.inputBox input{
+
+  padding: 0 5px;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  outline: none;
+  border: 2px solid white;
+  text-align: right;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+  /* box-shadow: inset 0px 0px 20px rgb(154, 154, 154);
+   */
+  color: white;
+
+}
+
+.culculatorBtn{
+    margin-top: 5px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+input::placeholder{
+    color:white;
+}
+.culculatorBtn button{
+    color: rgb(247, 248, 250);
+    background-color: black;
+    /* box-shadow: 0px 0px 10px rgb(245, 221, 3); */
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    font-weight: bold;
+    /* border: none; */
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    
+}
+
+.culculatorBtn button:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(55, 255, 0);
+    box-shadow: 0px 0px 20px rgb(249, 248, 247);
+}
+
+#allclear{
+    /* background-color: blue; */
+    color: rgb(55, 255, 0);
+    
+}
+#equal_ope{
+    background-color: rgb(245, 248, 245);
+    color: rgb(18, 19, 18);
+    /* box-shadow: none; */
+    font-size: 30px;
+}
+#delbtn{
+    /* background-color: blue; */
+    color: rgb(55, 255, 0);
+}
+#modlusbtn{
+    /* background-color: blue; */
+    color: rgb(55, 255, 0);    
+}
+#divide{
+    /* background-color: blue; */
+    color: rgb(55, 255, 0);
+    font-size: 30px;
+}
+#multi{
+    /* background-color: blue; */
+    font-size: 30px;
+    color: rgb(55, 255, 0);
+}
+#minus{
+    /* background-color: blue; */
+    font-size: 30px;
+    color: rgb(55, 255, 0);
+}
+#plus{
+    /* background-color: blue; */
+    font-size: 30px;
+    color: rgb(55, 255, 0);
+}

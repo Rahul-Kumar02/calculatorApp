@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Program</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- <h1>wlcome to calculate me</h1> -->
+
+    <div class="Calculator_caontainer">
+        <div class="inputBox">
+            <input type="text" placeholder="0" id="displayBox" />
+        </div>
+
+        <div class="culculatorBtn">
+            <button id="allclear">AC</button>
+            <button id="delbtn">DEL</button>
+            <button id="modlusbtn" class="ope">%</button>
+            <button id="divide" class="ope">/</button>
+        </div>
+
+        <div class="culculatorBtn">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button id="multi" class="ope">*</button>
+        </div>
+
+        <div class="culculatorBtn">
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button id="minus" class="ope">-</button>
+        </div>
+
+        <div class="culculatorBtn">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button id="plus" class="ope">+</button>
+        </div>
+
+        <div class="culculatorBtn">
+            <button>00</button>
+            <button>0</button>
+            <button>.</button>
+            <button id="equal_ope">=</button>
+        </div>
+    </div>
+
+    <script>
+      const displayInput = document.getElementById("displayBox");
+      const buttons = document.querySelectorAll("button");
+    //   console.log(buttons);
+
+    let strings = "";
+      const buttonArray = Array.from(buttons)
+      buttonArray.forEach((button) => {
+        button.addEventListener('click', (e) => {
+      
+    //    console.log(e.target.innerHTML);
+       
+        // displayInput.value = displayInput.value +  e.target.innerHTML
+
+        if(e.target.innerHTML == "=")
+        {
+         strings = eval(strings);
+         displayInput.value = strings;
+         console.log(strings);
+         
+
+        }
+        else if(e.target.innerHTML == "AC")
+        {
+            strings = "";
+            displayInput.value = strings;
+        }
+        else if(e.target.innerHTML == "DEL")
+        {
+            // strings = strings.substring(0, strings.length -1);
+            strings = strings.slice(0,  -1);
+            displayInput.value = strings;
+           
+        }
+        
+        else
+        {
+            strings = strings + e.target.innerHTML;
+            displayInput.value = strings;
+        }
+        
+        console.log(strings);
+        
+        
+        
+            
+       
+            
+            
+            
+        })
+      })
+      
+
+
+
+    </script>
+</body>
+
+</html>
